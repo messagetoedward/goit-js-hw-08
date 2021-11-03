@@ -30,6 +30,7 @@ function inputData() {
     if (existingData) {
         existingData = JSON.parse(existingData);
         Object.entries(existingData).forEach(([name, value]) => {
+            feedbackFormState[name] = value;
             form.elements[name].value = value;
         })
     } else { email.value = "", message.value = ""; };
