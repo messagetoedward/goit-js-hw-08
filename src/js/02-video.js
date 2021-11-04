@@ -11,7 +11,7 @@ player.on('timeupdate', throttle((data) => {
 
 function resumeTime() {
     let setTime = localStorage.getItem(LOCALSTORAGE_KEY);
-    player.setCurrentTime(setTime).then(function(seconds) {
+    if (setTime) player.setCurrentTime(setTime).then(function(seconds) {
 }).catch(function(error) {
     switch (error.name) {
         case 'RangeError':

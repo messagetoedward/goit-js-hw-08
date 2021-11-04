@@ -2,7 +2,7 @@ import throttle from "lodash.throttle";
 const form = document.querySelector('form');
 const email = document.querySelector('input');
 const message = document.querySelector('textArea');
-const feedbackFormState = {};
+let feedbackFormState = {};
 console.log(form);
 
 inputData();
@@ -18,6 +18,7 @@ const handleSubmit = (event) => {
     console.log(elements);
     email.value = "";
     message.value = "";
+    feedbackFormState = {};
     localStorage.removeItem('feedback-form-state');
 }
 
