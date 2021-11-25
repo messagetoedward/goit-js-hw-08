@@ -42,18 +42,18 @@
 //     .catch(error => console.log(error))
 
 
-const makePromise = (text, delay) => {
-    return new Promise(resolve => {
-        setTimeout(() => resolve(text), delay);
-    })
-}
+// const makePromise = (text, delay) => {
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve(text), delay);
+//     })
+// }
 
-const promiseA = makePromise("promiseA value", 1000);
-const promiseB = makePromise("promiseB value", 3000);
+// const promiseA = makePromise("promiseA value", 1000);
+// const promiseB = makePromise("promiseB value", 3000);
 
-Promise.race([promiseA, promiseB])
-    .then(text => console.log(text))
-    .catch(error => console.log(error));
+// Promise.race([promiseA, promiseB])
+//     .then(text => console.log(text))
+//     .catch(error => console.log(error));
 
 
 // new Promise(resolve => resolve('value')).then(value => console.log(value));
@@ -106,3 +106,20 @@ Promise.race([promiseA, promiseB])
 //     .then(user => console.log(user))
 //     .catch(error => console.log(error))
 //     .finally('settled');
+
+
+const horses = [
+    1,
+    2,
+    3,
+    4,
+    5,
+];
+
+
+
+function race(horse) {
+    return new Promise((resolve, reject)
+    
+)
+}
